@@ -1,0 +1,204 @@
+/* Updated style.css */
+
+@font-face {
+    font-family: 'LINE Seed';
+    src: url('fonts/LINE_Seed.woff2') format('woff2'),
+        url('fonts/LINE_Seed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'LINE Seed', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f8;
+}
+
+/* タブのコンテナ */
+.tab-container {
+    display: flex;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 20px;
+    justify-content: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* タブボタンのスタイル */
+.tab-button {
+    background-color: #fff;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    flex-grow: 1;
+    text-align: center;
+    border-radius: 20px;
+    margin: 0 5px;
+    color: #000; /* 選択されていないタブは黒文字 */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab-button:hover {
+    background-color: #f0f0f0;
+}
+
+.tab-button.active {
+    background-color: #007bff; /* アクティブなタブの背景色 */
+    color: #fff; /* アクティブなタブは白文字 */
+    font-weight: bold;
+}
+
+/* コンテンツのコンテナ */
+.tab-content {
+    display: none;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* アクティブなコンテンツを表示 */
+.tab-content.active {
+    display: block;
+}
+
+button {
+    margin-top: 0px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* 注文表示などのデザイン */
+#orderDisplay, #confirmDisplay, #historyDisplay {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+    width: 100%;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.order-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    flex: 0 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.order-item:hover {
+    transform: scale(1.05);
+}
+
+.order-item p {
+    margin: 5px 0;
+}
+
+.order-item button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-item button:hover {
+    background-color: #0056b3;
+}
+
+/* フォーム要素のスタイル */
+input[type="number"] {
+    padding: 10px;
+    width: 80px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 5px 0;
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border-color: #007bff;
+}
+
+/* 集計のスタイル */
+#summaryDisplay {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 履歴ページのリストデザイン */
+.history-item {
+    display: flex;
+    flex-direction: row; /* 横に並べる */
+    justify-content: space-between; /* アイテム間を均等に */
+    align-items: center; /* 中央に配置 */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 100%; /* 横長にする */
+    max-width: 800px; /* 最大幅を設定 */
+}
+
+.history-item:hover {
+    transform: translateY(-5px);
+    background-color: #f0f0f0;
+}
+
+.history-item p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.history-item .item-info {
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.history-item .item-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.history-item button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.history-item button:hover {
+    background-color: #0056b3;
+}

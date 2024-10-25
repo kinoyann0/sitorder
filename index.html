@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>注文アプリ</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tab-container">
+    <button class="tab-button active" onclick="showTab('orderTab')">注文</button>
+    <button class="tab-button" onclick="showTab('confirmTab')">確認</button>
+    <button class="tab-button" onclick="showTab('historyTab')">履歴</button>
+    </div>
+
+    <div id="orderTab" class="tab-content" style="display: block;">
+    <h2>注文ページ</h2>
+    <form id="orderForm">
+        <label>マルゲリータ: <input type="number" id="itemA" placeholder="数量" min="0"></label><br>
+        <label>　醤油マヨ　: <input type="number" id="itemB" placeholder="数量" min="0"></label><br>
+        <label>チョコバナナ: <input type="number" id="itemC" placeholder="数量" min="0"></label><br>
+        <button type="button" id="submitButton" onclick="addOrUpdateOrder()">注文</button>
+    </form>
+    <div id="orderDisplay"></div>   
+    </div>  
+
+    <div id="confirmTab" class="tab-content">
+    <h2>確認ページ</h2>
+    <div id="confirmDisplay"></div>
+    </div>
+
+    <div id="historyTab" class="tab-content">
+    <h2>履歴ページ</h2>
+    <div id="historyDisplay"></div>
+    <div id="totalDisplay"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
