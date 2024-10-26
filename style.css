@@ -1,5 +1,3 @@
-/* Updated style.css */
-
 @font-face {
     font-family: 'LINE Seed';
     src: url('fonts/LINE_Seed.woff2') format('woff2'),
@@ -114,21 +112,6 @@ button:hover {
     margin: 5px 0;
 }
 
-.order-item button {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.order-item button:hover {
-    background-color: #0056b3;
-}
-
 /* フォーム要素のスタイル */
 input[type="number"] {
     padding: 10px;
@@ -151,54 +134,4 @@ input[type="number"]:focus {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
-
-/* 履歴ページのリストデザイン */
-.history-item {
-    display: flex;
-    flex-direction: row; /* 横に並べる */
-    justify-content: space-between; /* アイテム間を均等に */
-    align-items: center; /* 中央に配置 */
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    width: 100%; /* 横長にする */
-    max-width: 800px; /* 最大幅を設定 */
-}
-
-.history-item:hover {
-    transform: translateY(-5px);
-    background-color: #f0f0f0;
-}
-
-.history-item p {
-    margin: 0;
-    font-size: 18px;
-}
-
-.history-item .item-info {
-    flex-grow: 1;
-    margin-right: 20px;
-}
-
-.history-item .item-actions {
-    display: flex;
-    gap: 10px;
-}
-
-.history-item button {
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.history-item button:hover {
-    background-color: #0056b3;
 }
